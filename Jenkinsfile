@@ -30,7 +30,7 @@ pipeline {
 
         stage('Deployment') {
             steps {
-                sh 'sshpass -p "gamut" scp target/gamutgurus.war gamut@172.17.0.3:/home/gamut/Distros/apache-tomcat-9.0.78/webapps'
+                sh 'sshpass -p "gamut" scp target/flipkart.war gamut@172.17.0.3:/home/gamut/Distros/apache-tomcat-9.0.78/webapps'
                 sh 'sshpass -p "gamut" ssh gamut@172.17.0.3 "/home/gamut/Distros/apache-tomcat-9.0.78/bin/startup.sh"'
             }
         }
